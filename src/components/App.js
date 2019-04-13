@@ -6,17 +6,18 @@ import { get } from 'axios';
 
 
 class App extends React.Component {
+
     constructor(props) {
         super(props);
 
         this.state = {
-            zipcode = '',
+            zipcode: '',
             city: {},
-            dates:[],
+            dates:  [],
             selectedDate: null
         };
         this.onFormSubmit = this.onFormSubmit.bind(this);
-        this.submitZipCode = this.submitZipCode.bind(this);
+        // this.submitZipCode = this.submitZipCode.bind(this);
     }
 
     onFormSubmit(zipcode) {
