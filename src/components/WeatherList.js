@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import WeatherListItem from './WeatherListItem';
 
 class WeatherList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
+
     render() { 
         const { days } = this.props;
         return (  
          <div className="wheater-list flex-parent">
-
+            {days.map((day) => 
+            <WeatherListItem 
+            key={day.dt} day={day} />
+                )}
          </div>
         );
     }
